@@ -32,7 +32,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SimpleInjector, Version=4.3.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.4.3.0\lib\net45\SimpleInjector.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,18 +45,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyInjectionConfiguration.cs" />
+    <Compile Include="Services\FileDetailsService.cs" />
+    <Compile Include="Services\IFileDetailsService.cs" />
+    <Compile Include="Validators\ArgumentsValidator.cs" />
+    <Compile Include="Constants\CommandLineSwitches.cs" />
+    <Compile Include="Enums\FileDetailsType.cs" />
+    <Compile Include="Exceptions\ArgumentsLengthException.cs" />
+    <Compile Include="Exceptions\InvalidSwitchException.cs" />
+    <Compile Include="Validators\IArgumentsValidator.cs" />
+    <Compile Include="Services\FileDetailsTypeService.cs" />
+    <Compile Include="Services\IFileDetailsTypeService.cs" />
+    <Compile Include="Services\FileDetailsFactory.cs" />
+    <Compile Include="Services\FileSizeDetails.cs" />
+    <Compile Include="Services\FileVersionDetails.cs" />
+    <Compile Include="Services\IFileDetails.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FileData.UI\FileData.UI.csproj">
+      <Project>{50dfbcbe-ca82-4db3-910f-744a4c881261}</Project>
+      <Name>FileData.UI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ThirdPartyTools\ThirdPartyTools.csproj">
       <Project>{16add673-64b2-43c8-92d9-ea5f2cc6863f}</Project>
       <Name>ThirdPartyTools</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
