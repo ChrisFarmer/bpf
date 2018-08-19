@@ -17,7 +17,7 @@ namespace FileData.Services
                     return new FileSizeDetails();
 
                 default:
-                    var exception = new ArgumentException($"Invalid FileDetailServiceType supplied: '{fileDetailsType}'");
+                    var exception = new ArgumentException($"Invalid FileDetailType supplied: '{fileDetailsType}'");
                     var logger = DependencyInjectionConfiguration.Container.GetInstance<ILogger>();
                     logger.LogException(exception);
 
