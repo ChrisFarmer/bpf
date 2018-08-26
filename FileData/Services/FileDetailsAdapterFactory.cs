@@ -1,23 +1,26 @@
 ﻿using System;
 using FileData.Enums;
 using FileData.Logging;
+using ThirdPartyTools;
 
 namespace FileData.Services
 {
-    public class FileDetailsFactory : IFileDetailsFactory
+    public class FileDetailsAdapterFactory : IFileDetailsAdapterFactory
     {
-        public IFileDetails GetDetailsByType(FileDetailsType fileDetailsType)
+        public IFileDetailsTarget GetDetailsTargetByType(FileDetailsType fileDetailsType)
         {
+            var fileDetails = new FileDetails();
+
             switch (fileDetailsType)
             {
                 case FileDetailsType.Version:
-                    return new FileVersionDetails();
+                    return new FileVersionDetailsAdapter(fileDetails);
 
                 case FileDetailsType.Size:
-                    return new FileSizeDetails();
+                    return new FileSizeDetailsAdapter(fileDetails);
 
                 default:
-                    var exception = new ArgumentException($"Invalid FileDetailType supplied: '{fileDetailsType}'");
+                    var exception = new ArgumentException($"Invalid FileDetailsType supplied: '{fileDetailsType}'");
                     var logger = DependencyInjectionConfiguration.Container.GetInstance<ILogger>();
                     logger.LogException(exception);
 

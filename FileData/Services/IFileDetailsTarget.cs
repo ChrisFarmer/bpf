@@ -1,6 +1,6 @@
 ﻿namespace FileData.Services
 {
-    public interface IFileDetails
+    public interface IFileDetailsTarget
     {
         string GetDetails(string filePath);
     }

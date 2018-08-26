@@ -47,7 +47,7 @@
   <ItemGroup>
     <Compile Include="DependencyInjectionConfiguration.cs" />
     <Compile Include="Services\FileDetailsService.cs" />
-    <Compile Include="Services\IFileDetailsFactory.cs" />
+    <Compile Include="Services\IFileDetailsAdapterFactory.cs" />
     <Compile Include="Services\IFileDetailsService.cs" />
     <Compile Include="Validators\ArgumentsValidator.cs" />
     <Compile Include="Constants\CommandLineSwitches.cs" />
@@ -57,10 +57,10 @@
     <Compile Include="Validators\IArgumentsValidator.cs" />
     <Compile Include="Services\FileDetailsTypeService.cs" />
     <Compile Include="Services\IFileDetailsTypeService.cs" />
-    <Compile Include="Services\FileDetailsFactory.cs" />
-    <Compile Include="Services\FileSizeDetails.cs" />
-    <Compile Include="Services\FileVersionDetails.cs" />
-    <Compile Include="Services\IFileDetails.cs" />
+    <Compile Include="Services\FileDetailsAdapterFactory.cs" />
+    <Compile Include="Services\FileSizeDetailsAdapter.cs" />
+    <Compile Include="Services\FileVersionDetailsTarget.cs" />
+    <Compile Include="Services\IFileDetailsTarget.cs" />
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\Logger.cs" />
     <Compile Include="Program.cs" />

@@ -5,12 +5,12 @@ namespace FileData.Services
     public class FileDetailsService : IFileDetailsService
     {
         private readonly IFileDetailsTypeService _fileDetailsTypeService;
-        private readonly IFileDetailsFactory _fileDetailsFactory;
+        private readonly IFileDetailsAdapterFactory _fileDetailsAdapterFactory;
 
-        public FileDetailsService(IFileDetailsTypeService fileDetailsTypeService, IFileDetailsFactory fileDetailsFactory)
+        public FileDetailsService(IFileDetailsTypeService fileDetailsTypeService, IFileDetailsAdapterFactory fileDetailsAdapterFactory)
         {
             _fileDetailsTypeService = fileDetailsTypeService;
-            _fileDetailsFactory = fileDetailsFactory;
+            _fileDetailsAdapterFactory = fileDetailsAdapterFactory;
         }
 
         public string GetFileDetails(string[] args)
@@ -19,9 +19,9 @@ namespace FileData.Services
             var filePath = args[1];
 
             var fileDetailsType = _fileDetailsTypeService.GetTypeBySwitch(commandLineSwitch);
-            var fileDetails = _fileDetailsFactory.GetDetailsByType(fileDetailsType);
+            var fileDetailsTarget = _fileDetailsAdapterFactory.GetDetailsTargetByType(fileDetailsType);
 
-            return fileDetails.GetDetails(filePath);
+            return fileDetailsTarget.GetDetails(filePath);
         }
     }
 }
