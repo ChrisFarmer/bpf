@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="DependencyInjectionConfiguration.cs" />
     <Compile Include="Services\FileDetailsService.cs" />
+    <Compile Include="Services\IFileDetailsFactory.cs" />
     <Compile Include="Services\IFileDetailsService.cs" />
     <Compile Include="Validators\ArgumentsValidator.cs" />
     <Compile Include="Constants\CommandLineSwitches.cs" />

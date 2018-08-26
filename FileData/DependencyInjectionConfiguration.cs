@@ -17,6 +17,7 @@ namespace FileData
             Container.Register<IArgumentsValidator, ArgumentsValidator>();
             Container.Register<IFileDetailsTypeService, FileDetailsTypeService>();
             Container.Register<IFileDetailsService, FileDetailsService>();
+            Container.Register<IFileDetailsFactory, FileDetailsFactory>();
 
             Container.Verify();
         }

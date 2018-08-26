@@ -4,9 +4,9 @@ using FileData.Logging;
 
 namespace FileData.Services
 {
-    internal static class FileDetailsFactory
+    public class FileDetailsFactory : IFileDetailsFactory
     {
-        internal static IFileDetails GetDetailsByType(FileDetailsType fileDetailsType)
+        public IFileDetails GetDetailsByType(FileDetailsType fileDetailsType)
         {
             switch (fileDetailsType)
             {
