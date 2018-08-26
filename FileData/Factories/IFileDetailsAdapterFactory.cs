@@ -1,6 +1,7 @@
-﻿using FileData.Enums;
+﻿using FileData.Adapters;
+using FileData.Enums;
 
-namespace FileData.Services
+namespace FileData.Factories
 {
     public interface IFileDetailsAdapterFactory
     {

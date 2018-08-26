@@ -1,9 +1,10 @@
 ﻿using System;
+using FileData.Adapters;
 using FileData.Enums;
 using FileData.Logging;
 using ThirdPartyTools;
 
-namespace FileData.Services
+namespace FileData.Factories
 {
     public class FileDetailsAdapterFactory : IFileDetailsAdapterFactory
     {

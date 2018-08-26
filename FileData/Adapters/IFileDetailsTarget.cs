@@ -1,4 +1,4 @@
-﻿namespace FileData.Services
+﻿namespace FileData.Adapters
 {
     public interface IFileDetailsTarget
     {

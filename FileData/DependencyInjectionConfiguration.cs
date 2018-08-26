@@ -1,4 +1,5 @@
-﻿using FileData.Logging;
+﻿using FileData.Factories;
+using FileData.Logging;
 using FileData.Services;
 using FileData.Validators;
 using SimpleInjector;

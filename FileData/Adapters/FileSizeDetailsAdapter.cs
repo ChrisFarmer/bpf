@@ -1,6 +1,6 @@
 ﻿using ThirdPartyTools;
 
-namespace FileData.Services
+namespace FileData.Adapters
 {
     public class FileSizeDetailsAdapter : IFileDetailsTarget
     {
