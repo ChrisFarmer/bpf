@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="ArgumentsValidator\ArgumentsValidatorTests.cs" />
     <Compile Include="ArgumentsValidator\ArgumentsValidatorBuilder.cs" />
+    <Compile Include="FileDetailsFactory\GetDetailsByTypeTests.cs" />
     <Compile Include="FileDetailsTypeService\FileDetailsTypeServiceBuilder.cs" />
     <Compile Include="FileDetailsTypeService\FileDetailsTypeServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
